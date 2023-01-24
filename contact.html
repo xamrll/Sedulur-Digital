@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Popup Contact Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .contact-form {
+        position: relative;
+        background-color: #f1f1f1;
+        padding: 10px;
+        width: 400px;
+        margin: 10px auto;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+          0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      }
+      .contact-form h1 {
+        text-align: center;
+        padding: 20px 0 20px 0;
+      }
+      .contact-form label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        resize: none;
+      }
+      .contact-form input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .contact-form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .contact-form .close {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #f1f1f1;
+      }
+      .contact-form .close:hover,
+      .contact-form .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .contact-form .message {
+        margin: 15px 0 0 0;
+        color: #b3b3b3;
+        font-size: 12px;
+      }
+      .contact-form .message a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+      .contact-form .message a:hover {
+        text-decoration: underline;
+      }
+      .contact-form .form-content {
+        padding: 40px;
+        background: #fff;
+      }
+      .contact-form .form-content .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-form" id="contact-form">
+      <div class="form-content">
+        <h1>Contact Us</h1>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="pesan"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Kirim" onclick="kirimPesan()" />
+          </div>
+        </form>
+      </div>
+      <a class="close" href="javascript:void(0);" onclick="closeForm()">X</a>
+      <script>
+        function kirimPesan() {
+          var nama = document.getElementById("nama").value;
+          var email = document.getElementById("email").value;
+          var pesan = document.getElementById("pesan").value;
+          window.open(
+            "https://api.whatsapp.com/send?phone=+6281370338803&text=Nama: " +
+              nama +
+              "%0AEmail: " +
+              email +
+              "%0APesan: " +
+              pesan
+          );
+        }
+      </script>
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("contact-form").style.display = "block";
+      }
+      function closeForm() {
+        document.getElementById("contact-form").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+
+  <head>
+    <title>Sedulur Digital - Creative Digital Agency</title>
+    <meta charset="utf-8" />
+    <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/main.css" class="color-switcher-link" />
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+      <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <div class="bg-danger text-center">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/" class="color-main"
+          >upgrade your browser</a
+        >
+        to improve your experience.
+      </div>
+    <![endif]-->
+
+    <!-- 	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div> -->
+
+    <!-- search modal -->
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="search_modal"
+      id="search_modal"
+    >
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="widget widget_search">
+        <form
+          method="get"
+          class="searchform search-form"
+          action="http://webdesign-finder.com/"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              value=""
+              name="search"
+              class="form-control"
+              placeholder="Search keyword"
+              id="modal-search-input"
+            />
+          </div>
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xs" role="document">
+        
+        <div class="modal-content">
+          <div>
+            <h6>Konfirmasi Pesanan Anda</h6>
+            <p id="title-modal"><b>Jenis Layanan</b> : UI/UX Desainer</p>
+            <p id="price-modal"><b>Harga</b> : Rp. 300.000,00</p>
+            <hr>
+          </div>
+          <form>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="buyer-name" class="col-form-label form-control">Nama :</label>
+                <input type="text" class="form-control" id="buyer-name" placeholder="Fulan">
+              </div>
+              <div class="form-group col-md-6 ml-auto">
+                <label for="handphone" class="col-form-label form-control" >No. HP:</label>
+                <input type="number" class="form-control" id="buyer-hp" placeholder="08xxxxxxxx">
+              </div>
+          </div>
+            <div class="form-group">
+              <label for="address" class="col-form-label  form-control" >Alamat :</label>
+              <textarea class="form-control" id="buyer-address" placeholder="Jl. Setia Budi"></textarea>
+            </div>
+            <div>
+              <button type="button" class="btn btn-maincolor mr-3" onclick="kirimPesan()">Kirim Pesanan</button>
+              <button type="button" class="btn btn-outline-maincolor " data-dismiss="modal">Batal</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+      <div class="fw-messages-wrap ls p-normal">
+        <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+        <!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+      </div>
+    </div>
+    <!-- eof .modal -->
+
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+      <div id="box_wrapper">
+        <!-- template sections -->
+
+        <div class="header_absolute slide_absolute ds bs s-overlay">
+          <!--topline section visible only on small screens|-->
+          <section class="page_toplogo ds s-overlay s-pt-10 s-pb-5 s-py-lg-30">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-12">
+                  <div
+                    class="d-lg-flex justify-content-lg-end align-items-lg-center"
+                  >
+                    <div class="mr-auto">
+                      <!--
+							if you want to display toplogo info on smaller screens
+							than use following CSS classes below:
+						 	d-sm-flex justify-content-sm-center
+						 -->
+                      <div
+                        class="d-none d-lg-flex justify-content-center justify-content-lg-start"
+                      >
+                        <a href="index.html" class="logo">
+                          <img src="images/logo.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <!--
+						if you want to display toplogo info on smaller screens
+						than use following CSS classes below:
+						d-sm-flex justify-lg-content-end justify-content-sm-between align-items-center
+					-->
+                    <div
+                      class="d-flex justify-lg-content-end align-items-center meta-icons"
+                    >
+                      <div class="media">
+                        <div class="icon-styled color-main fs-20">
+                          <i class="ico-email"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6>Email</h6>
+                          <p class="fw-400">email@sedulurdigital.com</p>
+                        </div>
+                      </div>
+                      <div class="media d-none d-md-flex">
+                        <div class="icon-styled color-main fs-20">
+                          <i class="ico-placeholder"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6>WhatsApp</h6>
+                          <p class="fw-400">+62 813-7033-8803</p>
+                        </div>
+                      </div>
+                      <div class="d-none d-xl-block">
+                        <a
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          class="btn btn-small btn-outline-maincolor btn-appointment"
+                          >Get in Touch</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- header toggler -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--eof topline-->
+
+          <!-- header with single Bootstrap column only for navigation and includes. Used with topline and toplogo sections. Menu toggler must be in toplogo section -->
+          <header
+            class="page_header s-py-10 s-py-lg-0 ds ms s-overlay nav-bordered justify-nav-center"
+          >
+            <div class="container-fluid">
+              <div class="row align-items-center">
+                <div class="d-lg-none col-11">
+                  <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="" />
+                  </a>
+                </div>
+                <div class="col-xl-12">
+                  <div class="nav-wrap">
+                    <!-- main nav start -->
+                    <nav class="top-nav">
+                      <ul class="nav sf-menu">
+                        <li>
+                          <a href="index.html">Home</a>
+                        </li>
+                        <!-- eof pages -->
+                        <li class="active">
+                          <a href="services.html">Services</a>
+                          <ul>
+                            <li>
+                              <a href="services.html#graphic"></i>Desain Grafis</a
+                              >
+                            </li>
+                            <li>
+                              <a href="services.html#service"></i>Reperasi PC/Laptop</a
+                              >
+                            </li>
+                            <li>
+                              <a href="services.html#web"></i>Web Development</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                          <a href="about_us.html">About Us</a>
+                        </li>
+                        <!-- eof features -->
+                        <!-- contacts -->
+                        <li>
+                          <a href="services.html#contact_us_bottom"
+                            >Contact Us</a
+                          >
+                        </li>
+                        <!-- eof contacts -->
+                      </ul>
+                    </nav>
+                    <!-- eof main nav -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- header toggler -->
+
+            <span class="toggle_menu"><span></span></span>
+          </header>
+        </div>
+
+        <section class="page_title ds s-pt-105 s-pb-50 s-pt-lg-115 s-pb-lg-60">
+          <div class="divider-3 d-none d-lg-block"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 mt-5 pt-5">
+                <h1 class="bold text-center text-lg-left">Services</h1>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item active">Services</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Logo Design Sample -->
+
+        <div id="graphic"></div>
+        <section
+          class="s-pt-55 s-pb-0 s-pt-lg-145 s-pb-lg-150 ls ms blog-section c-gutter-60"
+          id="blog"
+        >
+          <div class="container">
+            <!-- Graphic Design Sample-->
+            <div class="col-12 mb-55">
+              <h3 class="special-heading text-center">
+                Desain<span class="text-gradient"> Grafis</span>
+              </h3>
+              <p class="fs-20 color-dark"></p>
+              <div class="divider-64 d-none d-lg-block"></div>
+              <!-- <h3 class="special-heading text-center">Web Development<span class="text-gradient"></span></h3> -->
+            </div>
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Logo </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 300k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <button
+                          class="btn btn-small btn-maincolor"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                          onclick="openModal('Design Logo', 'Rp. 300.000,00')"
+                          >Place Order</button
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Banner/Spanduk </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 250k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Baliho/Backdrop </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 250k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design X Banner/Roll Banner </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 250k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Business Cards </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 150k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Brosur </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 250k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Curiculum Vitae (CV) </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 30k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Flyers </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Katalog/Daftar Menu </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 150k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Kop Surat </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 150k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Kemasan </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 300k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Label Kemasan </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 150k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Neon Box/Billboard </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 350k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Stempel </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 50k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Slide Presentasi </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Stiker </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 50k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Umbul-Umbul </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 200k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Design Undangan </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k/Design</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div id="service"></div>
+            <!-- Service PC/Laptop Sample-->
+            <div class="col-12 mb-55">
+              <h3 class="special-heading text-center">
+                Jasa Reperasi<span class="text-gradient"> PC/Laptop</span>
+              </h3>
+              <p class="fs-20 color-dark"></p>
+              <div class="divider-64 d-none d-lg-block"></div>
+              <!-- <h3 class="special-heading text-center">Web Development<span class="text-gradient"></span></h3> -->
+            </div>
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Paket 1 </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k</h6>
+                      <ul class="list1">
+                        <li>Proses 1×24 jam</li>
+                        <li>Install Ulang Windows 7, 10 dan 11</li>
+                        <li>Install Driver PC/Laptop</li>
+                        <li>Aneka Software - software</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Paket 2 </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k</h6>
+                      <ul class="list1">
+                        <li>Proses 1×24 jam</li>
+                        <li>Install Ulang Windows 7, 10 dan 11</li>
+                        <li>Install Driver PC/Laptop</li>
+                        <li>Aneka Software - software</li>
+                        <li>Bersihkan Hardware PC/Laptop</li>
+                        <li>Ganti Pasta</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Paket Bebas </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 100k</h6>
+                      <ul class="list1">
+                        <li>Reperasi disesuiakan dengan kerusakan PC/Laptop dan sesuai dengna keinginan customer.</li>
+                        <p>(Misal : Bersihin PC/Laptop, Ganti Pasta, dll.)</p>
+                      </ul>                 
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div id="web"></div>
+            <!-- Web Development Sample-->
+            <div class="col-12 mb-55">
+              <h3 class="special-heading text-center">
+                Web<span class="text-gradient"> Development</span>
+              </h3>
+              <p class="fs-20 color-dark"></p>
+              <div class="divider-64 d-none d-lg-block"></div>
+              <!-- <h3 class="special-heading text-center">Web Development<span class="text-gradient"></span></h3> -->
+            </div>
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Portfolio Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 500k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Product Catalog Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 1000k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> E-Commerce Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 5000k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+                <br>
+                <br>
+                <br>
+                <br>
+              </div>
+            </div>
+
+            <div id="uiux"></div>
+            <!-- Web Development Sample-->
+            <div class="col-12 mb-55">
+              <h3 class="special-heading text-center">
+                UI/UX<span class="text-gradient"> Design</span>
+              </h3>
+              <p class="fs-20 color-dark"></p>
+              <div class="divider-64 d-none d-lg-block"></div>
+              <!-- <h3 class="special-heading text-center">Web Development<span class="text-gradient"></span></h3> -->
+            </div>
+            <div class="row justify-content-center c-mb-60 c-mb-lg-0">
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Portfolio Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/1.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 500k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> Product Catalog Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/2.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 1000k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <article
+                  class="vertical-item text-center content-padding post type-post status-publish format-standard has-post-thumbnail bordered ls"
+                >
+                  <div class="tagcloud">
+                    <a href="blog-right.html" class="tag-cloud-link">
+                      <span> E-Commerce Website </span>
+                    </a>
+                  </div>
+                  <div class="item-media post-thumbnail">
+                    <img
+                      src="images/sample_images/web_development/3.jpg"
+                      alt=""
+                    />
+                    <div class="media-links">
+                      <a class="abs-link" title="" href="blog-left.html"></a>
+                    </div>
+                  </div>
+                  <!-- .post-thumbnail -->
+                  <div class="item-content">
+                    <div class="entry-content">
+                      <h6>Harga mulai Rp. 5000k</h6>
+                      <ul class="list1">
+                        <li>Free Revisi</li>
+                        <li>Proses 1×24 jam</li>
+                        <li>File Master : PSD / AI</li>
+                        <li>Export : JPG / PNG / PDF</li>
+                      </ul>
+                    </div>
+                    <!-- .entry-content -->
+                    <header class="entry-header">
+                      <h4 class="entry-title">
+                        <a
+                          class="btn btn-small btn-maincolor"
+                          href="https://wa.me/+6281370338803"
+                          target="_blank"
+                          >Place Order</a
+                        >
+                      </h4>
+                    </header>
+                    <!-- .entry-header -->
+                  </div>
+                  <!-- .item-content -->
+                </article>
+                <!-- #post-## -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- More Services -->
+        <section
+          class="ls s-pt-55 s-pt-md-50 s-pb-5 s-pt-lg-140 s-pb-lg-145 service-section text-center text-lg-left c-gutter-0"
+          id="service"
+        >
+          <div class="container">
+            <div class="col-12 mb-50 text-center">
+              <h4>
+                <span class="text-gradient"
+                  >Hubungi Kami Untuk Layanan Lebih Lanjut!</span
+                >
+              </h4>
+              <div class="divider-60 d-none d-xl-block"></div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="ls s-pt-60 s-pb-0 s-pt-md-55 s-pb-md-45 s-pt-lg-145 s-pb-lg-115 c-mb-55 c-mb-md-0 text-center text-md-left side-section"
+        >
+          <div class="divider-5 d-none d-mb-block"></div>
+          <div class="cover-image s-cover-left"></div>
+          <!-- half image background element -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="images/side-image01.png" alt="" />
+              </div>
+              <div class="col-md-6 animate" data-animation="moveFromRight">
+                <div class="item-content content-left-padding">
+                  <h3 class="special-heading">
+                    Mengapa Anda Membutuhkan <br /><br /><span
+                      class="text-gradient"
+                      >Website?</span
+                    >
+                  </h3>
+                  <p>
+                    Tidak pernah ada waktu yang lebih baik atau lebih penting
+                    untuk berinvestasi di situs web untuk bisnis Anda. Sebuah
+                    situs web menawarkan berbagai macam manfaat untuk semua
+                    bisnis, dan sebagian besar manfaat ini meningkat nilainya
+                    secara eksponensial dari tahun ke tahun, sama seperti
+                    Internet itu sendiri.
+                  </p>
+                  <ul class="list1">
+                    <li>1. Situs web membuat Anda terlihat profesional.</li>
+                    <li>2. Situs web Anda menarik pelanggan baru.</li>
+                    <li>3. Pamerkan produk dan layanan Anda dengan jelas.</li>
+                    <li>
+                      4. Situs web Anda menetapkan tempat Anda di industri Anda.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="ls s-pt-3 s-pb-0 s-pt-md-55 s-pb-md-45 s-pt-lg-145 s-pb-lg-115 c-mb-55 c-mb-md-0 text-center text-md-left side-section"
+          id="contacts"
+        >
+          <div class="divider-5 d-none d-mb-block"></div>
+          <div class="cover-image s-cover-right"></div>
+          <!-- half image background element -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 order-1 order-md-2">
+                <img src="images/side-image02.png" alt="" />
+              </div>
+              <div
+                class="col-md-6 order-2 order-md-1 animate"
+                data-animation="moveFromLeft"
+              >
+                <div class="item-content content-right-padding">
+                  <h3 class="special-heading">
+                    Mengapa Anda Membutuhkan <br /><br /><span
+                      class="text-gradient"
+                      >Graphic Design?</span
+                    >
+                  </h3>
+                  <p>
+                    Desain grafis lebih dari sekadar estetika — ini adalah
+                    bentuk komunikasi antara bisnis Anda dan audiens Anda.
+                    Bisnis menggunakan grafik di setiap tahap corong pemasaran
+                    untuk menginformasikan, melibatkan, dan akhirnya membujuk
+                    calon pelanggan untuk melakukan pembelian atau mengambil
+                    tindakan yang diinginkan.
+                  </p>
+                  <ul class="list1">
+                    <li>
+                      1. Membantu bisnis apa pun membuat kesan positif dan
+                      bertahan lama.
+                    </li>
+                    <li>
+                      2. Apa pun industri atau bidang Anda, desain grafis akan
+                      membantu bisnis Anda menciptakan kredibilitas.
+                    </li>
+                    <li>
+                      3. Info-Grafis adalah cara yang bagus untuk meringkas
+                      informasi yang akan dilewatkan oleh audiens Anda.
+                    </li>
+                    <li>
+                      4. Meningkatkan keunggulan kompetitif perusahaan Anda
+                      menjadi lebih penting dari sebelumnya, karena persaingan
+                      terus meningkat.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider-3 d-block d-mb-none"></div>
+        </section>
+
+        <div id="contact_us_bottom"></div>
+        <footer
+          class="page_footer text-center text-md-left ds ms s-pt-65 s-pt-lg-125 s-pb-lg-35 c-gutter-40 main-footer"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="divider-20 d-none d-lg-block"></div>
+
+              <div class="col-md-6 col-lg-3 animate" data-animation="fadeInUp">
+                <div class="widget widget_icons_list">
+                  <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="" />
+                    <!-- <span class="logo-text fw-500">Candy<span class="fw-200">Car</span></span> -->
+                  </a>
+                  <div class="media side-icon-box">
+                    <div class="icon-styled color-main">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <p class="media-body color-grey">
+                      Jl. Platina VI Lingkungan XIV
+                    </p>
+                  </div>
+                  <div class="media side-icon-box">
+                    <div class="icon-styled color-main">
+                      <i class="fa fa-phone"></i>
+                    </div>
+
+                    <p class="media-body color-grey">+62 813-7033-8803</p>
+                  </div>
+                  <div class="media side-icon-box">
+                    <div class="icon-styled color-main">
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <p class="media-body color-grey">
+                      <a href="mailto:">email@sedulurdigital.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-3 animate order-md-3 order-lg-2"
+                data-animation="fadeInUp"
+              >
+                <div class="widget widget_page_links">
+                  <h3>Quick Tabs</h3>
+                  <ul>
+                    <li>
+                      <a href="index.html"
+                        ><i class="ico-check-circle"></i>Home</a
+                      >
+                    </li>
+                    <li>
+                      <a href="services.html"
+                        ><i class="ico-check-circle"></i>Services</a
+                      >
+                    </li>
+                    <li>
+                      <a href="gallery.html"
+                        ><i class="ico-check-circle"></i>Gallery</a
+                      >
+                    </li>
+                    <li>
+                      <a href="about_us.html"
+                        ><i class="ico-check-circle"></i>About Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-3 animate order-md-4 order-lg-3"
+                data-animation="fadeInUp"
+              >
+                <div class="widget widget_services_links">
+                  <h3>Services</h3>
+                  <ul>
+                    <li>
+                      <a href="services.html#graphic"
+                        ><i class="ico-check-circle"></i>Desain Grafis</a
+                      >
+                    </li>
+                    <li>
+                      <a href="services.html#service"
+                        ><i class="ico-check-circle"></i>Reperasi PC/Laptop</a
+                      >
+                    </li>
+                    <li>
+                      <a href="services.html#web"
+                        ><i class="ico-check-circle"></i>Web Development</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-3 c-gutter-10 animate order-lg-4"
+                data-animation="fadeInUp"
+              >
+                <div class="widget widget_working_hours">
+                  <h3>Working Hours</h3>
+                  <ul>
+                    <li class="row">
+                      <div class="color-grey col-3">Mn-Fr</div>
+                      <div class="col-md-9 col-5">
+                        <span class="color-darkgrey"
+                          ><sup></sup>Always Available<sup></sup
+                        ></span>
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="color-grey col-3">Sat</div>
+                      <div class="col-md-9 col-5">
+                        <span class="color-darkgrey"
+                          ><sup></sup>Always Available<sup></sup
+                        ></span>
+                      </div>
+                    </li>
+                    <li class="row">
+                      <div class="color-grey col-3">Sun</div>
+                      <div class="col-md-9 col-5">
+                        <span class="color-darkgrey">Always Available</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <section class="page_copyright ds ms s-pt-5 s-pb-25 s-py-lg-20">
+          <div class="container">
+            <div class="divider-2 d-none d-lg-block"></div>
+            <div class="row align-items-center">
+              <div class="divider-20 d-none d-lg-block"></div>
+
+              <div class="col-md-12 text-center">
+                <p class="social-icons with-border">
+                  <span
+                    ><a
+                      href="#"
+                      target="_blank"
+                      class="fa fa-facebook border-icon rounded-icon"
+                      title="facebook"
+                    ></a
+                  ></span>
+                  <span
+                    ><a
+                      href="#"
+                      target="_blank"
+                      class="fa fa-paper-plane border-icon rounded-icon"
+                      title="telegram"
+                    ></a
+                  ></span>
+                  <!-- <span><a href="https://www.instagram.com/"  target="_blank" class="fa fa-instagram border-icon rounded-icon" title="instagram"></a></span> -->
+                </p>
+                <p>
+                  <a target="_blank" href="#"
+                    >&copy; SEDULUR DIGITAL 2023 - All Rights Reserved</a
+                  >
+                </p>
+              </div>
+              <div class="divider-20 d-none d-lg-block"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+
+    <script src="js/compressed.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/switcher.js"></script> -->
+
+    <!-- Google Map Script -->
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&amp;callback=initGoogleMap"
+    ></script>
+  </body>
+</html>
