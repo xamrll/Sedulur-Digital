@@ -19439,7 +19439,7 @@ img.absolute_image {
 
 .modal-dialog .modal-content {
   border: 0;
-  padding: 108px 50px 123px;
+  padding: 50px 50px 50px;
 }
 
 .modal-dialog .modal-content .form-group {
